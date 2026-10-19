@@ -19,6 +19,7 @@ import {
   DeviceAccessRequest,
 } from '../../services/deviceAuthService';
 import { RefreshIcon } from '../common/Icons';
+import { BRAND_ASSETS } from '../../theme/brandAssets';
 
 interface DeviceAccessGateProps {
   status: 'unregistered' | 'pending' | 'rejected';
@@ -147,7 +148,7 @@ export const DeviceAccessGate: React.FC<DeviceAccessGateProps> = ({
           <View style={[styles.card, isMobile && styles.cardMobile]}>
             {/* Netflix Brand Wordmark */}
             <Image
-              source={require('../../../assets/brand/meflix-wordmark.png')}
+              source={BRAND_ASSETS.wordmark}
               style={styles.logo}
               resizeMode="contain"
             />

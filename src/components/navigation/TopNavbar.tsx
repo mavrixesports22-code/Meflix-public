@@ -14,6 +14,7 @@ import { NavTab } from '../../types';
 import { Focusable } from '../common/Focusable';
 import { SearchIcon, CloseIcon, HelpIcon, UserIcon, CaretDownIcon, NetflixSmileyIcon, ShieldIcon } from '../common/Icons';
 import { UserProfile } from '../../types';
+import { BRAND_ASSETS } from '../../theme/brandAssets';
 
 interface TopNavbarProps {
   currentTab: NavTab;
@@ -66,7 +67,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
         {/* Logo */}
         <Focusable onPress={() => onSelectTab('home')} style={styles.logoBtn}>
           <Image
-            source={require('../../../assets/brand/meflix-wordmark.png')}
+            source={BRAND_ASSETS.wordmark}
             style={styles.logo}
             resizeMode="contain"
           />

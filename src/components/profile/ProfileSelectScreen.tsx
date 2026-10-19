@@ -14,6 +14,7 @@ import { UserProfile, StreamingServiceOption } from '../../types';
 import { StorageService } from '../../services/storageService';
 import { Focusable } from '../common/Focusable';
 import { NetflixSmileyIcon, ShieldIcon } from '../common/Icons';
+import { BRAND_ASSETS } from '../../theme/brandAssets';
 
 interface ProfileSelectScreenProps {
   onSelectProfile: (profile: UserProfile) => void;
@@ -35,7 +36,7 @@ export const SERVICE_PROFILES: UserProfile[] = [
     avatarColor: '#E50914',
     primaryService: 'netflix',
     services: ['netflix'],
-    avatarImage: require('../../../assets/brand/netflix-profile.jpg'),
+    avatarImage: BRAND_ASSETS.netflixProfile,
   },
   {
     id: 'p_prime',
@@ -43,7 +44,7 @@ export const SERVICE_PROFILES: UserProfile[] = [
     avatarColor: '#00A8E1',
     primaryService: 'prime',
     services: ['prime'],
-    avatarImage: require('../../../assets/brand/prime-profile.jpg'),
+    avatarImage: BRAND_ASSETS.primeProfile,
   },
 ];
 
@@ -73,8 +74,9 @@ export const ProfileSelectScreen: React.FC<ProfileSelectScreenProps> = ({
       {/* Top Header Navbar */}
       <View style={[styles.header, { paddingTop: insets.top + 10 }]}>
         <View style={styles.headerLeft}>
+          {/* meflix-wordmark.png */}
           <Image
-            source={require('../../../assets/brand/meflix-wordmark.png')}
+            source={BRAND_ASSETS.wordmark}
             style={styles.logo}
             resizeMode="contain"
           />

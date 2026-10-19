@@ -5,7 +5,6 @@
     "version": "1.0.0",
     "privacy": "public",
     "orientation": "default",
-    "icon": "./assets/brand/meflix-mx.png",
     "userInterfaceStyle": "dark",
     "backgroundColor": "#101012",
     "ios": {
@@ -13,14 +12,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.mavrix.meflix",
-      "adaptiveIcon": {
-        "backgroundColor": "#101012",
-        "foregroundImage": "./assets/brand/meflix-mx.png"
-      }
-    },
-    "web": {
-      "favicon": "./assets/brand/meflix-mx.png"
+      "package": "com.mavrix.meflix"
     },
     "plugins": [
       "expo-font",
