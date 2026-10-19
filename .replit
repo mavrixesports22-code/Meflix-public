@@ -1,0 +1,5 @@
+run = "npx expo start --tunnel"
+entrypoint = "index.ts"
+
+[nix]
+channel = "stable-24_05"
