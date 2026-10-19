@@ -13,7 +13,6 @@ import { PrimeFilter, filterPrimeItems, getPrimeTitle } from './primeCatalog';
 import { usePrimeCatalog } from './usePrimeCatalog';
 import { usePrimeLibrary } from './usePrimeLibrary';
 import { PrimeVideoPlayer } from './PrimeVideoPlayer';
-import { BRAND_ASSETS } from '../theme/brandAssets';
 
 type Page = 'home' | 'find' | 'stuff' | 'settings';
 type DetailTab = 'episodes' | 'related' | 'details';
@@ -237,7 +236,7 @@ export function PrimeVideoApp({ profile, onSwitchProfile, onOpenAdmin }: {
     <StatusBar style="light" />
     <View style={[s.header, { paddingHorizontal: gutter }]}><MeflixLogo />
       {!compact && <View style={s.desktopNav}>{NAV.map(nav => <Focusable key={nav.id} accessibilityRole="tab" accessibilityLabel={nav.title} accessibilityState={{ selected: page === nav.id }} onPress={() => navigate(nav.id)} style={[s.navItem, page === nav.id && s.desktopSelected]}><Text style={[s.navText, page === nav.id && { color: '#fff' }]}>{nav.title}</Text></Focusable>)}</View>}
-      <View style={s.headerActions}><Focusable accessibilityRole="button" accessibilityLabel="Switch streaming profile" onPress={onSwitchProfile} style={s.iconButton}><Image source={profile.avatarImage || BRAND_ASSETS.primeProfile} style={s.avatar} /></Focusable>
+      <View style={s.headerActions}><Focusable accessibilityRole="button" accessibilityLabel="Switch streaming profile" onPress={onSwitchProfile} style={s.iconButton}><Image source={profile.avatarImage || require('../../assets/brand/prime-profile.jpg')} style={s.avatar} /></Focusable>
         <Focusable accessibilityRole="button" accessibilityLabel="Settings" onPress={() => navigate('settings')} style={s.iconButton}><SettingsIcon /></Focusable></View>
     </View>
     {page === 'home' && !collection && <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ flexGrow: 0, flexShrink: 0, minHeight: 54, maxHeight: 54 }} contentContainerStyle={[s.filters, { paddingHorizontal: gutter }]}>

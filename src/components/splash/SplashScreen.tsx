@@ -9,7 +9,6 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { BRAND_ASSETS } from '../../theme/brandAssets';
 
 interface SplashScreenProps {
   onFinish: () => void;
@@ -160,15 +159,14 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
             },
           ]}
         >
-          {/* meflix-mx.png */}
           <Image
-            source={BRAND_ASSETS.emblem}
+            source={require('../../../assets/brand/meflix-mx.png')}
             style={{ width: logoSize, height: logoSize }}
             resizeMode="contain"
           />
         </Animated.View>
 
-        {/* Elegant Wordmark Beneath (meflix-wordmark.png) */}
+        {/* Elegant Wordmark Beneath */}
         <Animated.View
           style={[
             styles.wordmarkContainer,
@@ -178,7 +176,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
           ]}
         >
           <Image
-            source={BRAND_ASSETS.wordmark}
+            source={require('../../../assets/brand/meflix-wordmark.png')}
             style={{ width: wordmarkWidth, height: wordmarkWidth * 0.28 }}
             resizeMode="contain"
           />

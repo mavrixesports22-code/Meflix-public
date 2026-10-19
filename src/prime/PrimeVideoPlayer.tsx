@@ -9,7 +9,6 @@ import { primeSourceService } from '../services/primeSourceService';
 import { netmirrorService, NetMirrorService } from '../services/netmirrorService';
 import type { AuthInfo, PlaybackResolution } from '../services/netmirrorService';
 import { PrimeColors } from './primeTheme';
-import { BRAND_ASSETS } from '../theme/brandAssets';
 
 type PlayerTheme = { background: string; surface: string; accent: string; muted: string; overlay: string };
 const PRIME_PLAYER_THEME: PlayerTheme = { background: '#00050D', surface: '#192330', accent: PrimeColors.blue, muted: '#8996a7', overlay: 'rgba(0,5,13,0.45)' };
@@ -158,7 +157,7 @@ function ServicePlayerSession({ item, initialEpisode, resumePosition = 0, onClos
     <Header title={item.title} onClose={onClose} theme={visualTheme} />
     <KeyboardAvoidingView style={styles.formArea} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <View style={styles.form}>
-        <Image accessibilityLabel="Meflix" source={BRAND_ASSETS.wordmark} resizeMode="contain" style={styles.brand} />
+        <Image accessibilityLabel="Meflix" source={require('../../assets/brand/meflix-wordmark.png')} resizeMode="contain" style={styles.brand} />
         {loading ? <><ActivityIndicator size="large" color={visualTheme.accent} /><Text style={[styles.description, { color: visualTheme.muted }]}>Connecting to video service…</Text></> : <>
         <Text style={styles.heading}>{auth ? 'Sign in to play' : 'Unable to load video'}</Text>
           {!!message && <Text accessibilityRole="alert" style={[styles.description, { color: visualTheme.muted }]}>{message}</Text>}
@@ -211,7 +210,7 @@ function PlayerSession({ item, sourceUri, resumePosition = 0, onClose, onProgres
     <Header title={item.title} onClose={onClose} theme={visualTheme} />
     <KeyboardAvoidingView style={styles.formArea} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <View style={styles.form}>
-        <Image accessibilityLabel="Meflix" source={BRAND_ASSETS.wordmark} resizeMode="contain" style={styles.brand} />
+        <Image accessibilityLabel="Meflix" source={require('../../assets/brand/meflix-wordmark.png')} resizeMode="contain" style={styles.brand} />
         <Text style={styles.heading}>Add a video source</Text>
         <Text style={[styles.description, { color: visualTheme.muted }]}>Use a video URL you own or have permission to play.</Text>
         <Text style={styles.label}>Video URL</Text>
@@ -380,7 +379,7 @@ function Header({ title, onClose, theme = NETFLIX_PLAYER_THEME }: { title: strin
   return <View style={[styles.header, { backgroundColor: theme.background }]}>
     <Action label="‹ Close" onPress={onClose} secondary theme={theme} />
     <Text style={styles.title} numberOfLines={1}>{title}</Text>
-    <Image accessibilityLabel="Meflix" source={BRAND_ASSETS.wordmark} resizeMode="contain" style={styles.headerBrand} />
+    <Image accessibilityLabel="Meflix" source={require('../../assets/brand/meflix-wordmark.png')} resizeMode="contain" style={styles.headerBrand} />
   </View>;
 }
 

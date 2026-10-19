@@ -4,10 +4,9 @@ import { Focusable } from '../components/common/Focusable';
 import { ArtworkImage } from '../components/common/ArtworkImage';
 import { TitleItem } from '../types';
 import { PrimeColors as C } from './primeTheme';
-import { BRAND_ASSETS } from '../theme/brandAssets';
 
 export function MeflixLogo() {
-  return <Image accessibilityLabel="Meflix" source={BRAND_ASSETS.wordmark} resizeMode="contain" style={s.logo} />;
+  return <Image accessibilityLabel="Meflix" source={require('../../assets/brand/meflix-wordmark.png')} resizeMode="contain" style={s.logo} />;
 }
 
 export function PrimeButton({ label, onPress, icon, primary, style, selected, disabled }: {

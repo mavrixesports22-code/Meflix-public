@@ -13,7 +13,6 @@ import { Focusable } from '../common/Focusable';
 import { Badge } from '../common/Badge';
 import { PlayIcon, InfoIcon, PlusIcon, CheckIcon, VolumeIcon, MuteIcon } from '../common/Icons';
 import { ArtworkImage } from '../common/ArtworkImage';
-import { BRAND_ASSETS } from '../../theme/brandAssets';
 
 interface BillboardHeroProps {
   item: TitleItem;
@@ -63,7 +62,7 @@ export const BillboardHero: React.FC<BillboardHeroProps> = ({
         {/* Badge */}
         <View style={styles.badgeRow}>
           <Image
-            source={BRAND_ASSETS.emblem}
+            source={require('../../../assets/brand/meflix-mx.png')}
             style={styles.monogram}
             resizeMode="contain"
           />
