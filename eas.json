@@ -1,0 +1,26 @@
+{
+  "cli": {
+    "version": ">= 20.5.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "channel": "preview"
+    },
+    "ios-simulator": {
+      "distribution": "internal",
+      "environment": "preview",
+      "env": {
+        "MEFLIX_IOS_TARGET": "phone"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "channel": "ios-simulator"
+    }
+  }
+}

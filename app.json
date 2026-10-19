@@ -1,25 +1,51 @@
 {
   "expo": {
-    "name": "meflix-native",
-    "slug": "meflix-native",
+    "name": "Meflix",
+    "slug": "meflix",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "privacy": "public",
+    "orientation": "default",
+    "icon": "./assets/brand/meflix-mx.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#101012",
     "ios": {
+      "bundleIdentifier": "com.mavrix.meflix",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.mavrix.meflix",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
+        "backgroundColor": "#101012",
+        "foregroundImage": "./assets/brand/meflix-mx.png"
+      }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/brand/meflix-mx.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-video",
+      [
+        "@react-native-tvos/config-tv",
+        {
+          "isTV": true,
+          "showInRecentsTV": true
+        }
+      ],
+      "expo-status-bar",
+      "expo-image"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "e597a58f-5f51-443a-8f53-0f5ac8844ccb"
+      }
+    },
+    "owner": "satvik1234",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/e597a58f-5f51-443a-8f53-0f5ac8844ccb"
     }
   }
 }

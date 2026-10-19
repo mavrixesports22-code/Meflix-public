@@ -1,0 +1,13 @@
+{
+  "tool": "Built-in image_gen",
+  "prompts": [
+    {
+      "asset": "meflix-mx.png",
+      "prompt": "Use case: logo-brand. Create a production logo asset for a premium streaming app. Exact text: \"MX\" (M then X only). A bold, compact geometric MX monogram with clean angular ribbon strokes and subtle dark-red facets, vivid streaming-red #E50914. Original professional minimal identity, optically balanced and legible at 24px. Flat vector-like crisp edges, square composition, icon fills 86% of canvas, genuinely transparent background. No surrounding badge, no shadows, no glow, no mockup, no other lettering. Deliver only the isolated MX mark."
+    },
+    {
+      "asset": "meflix-wordmark.png",
+      "prompt": "Use case: logo-brand. Asset: horizontal streaming-app wordmark. Exact text verbatim: \"Meflix\" spelled M e f l i x, capital M followed by lowercase eflix. Minimal professional custom geometric sans-serif, bold clean letterforms, compact confident spacing, vivid red #E50914 with restrained dark red facets consistent with a geometric MX monogram. Straight baseline. Wordmark alone on a genuinely transparent background; wide horizontal composition, tightly framed with only small transparent padding. Crisp vector-like edges, no symbol beside the text, no slogan, no shadow, no glow, no mockup, no other words."
+    }
+  ]
+}
